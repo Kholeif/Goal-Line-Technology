@@ -28,7 +28,11 @@ Consists of two parts:
 
 # Work Distribution : 
 Mohamed Ashraf Youssef : Android Development.
+
 Mahmoud Yasser Mohamed : Android Development.
+
 Mahmoud Mohamed Kholeif : Video Processing.
+
 Mohamed Ahmed Abdelhamid : Video Processing. 
+
 Mohamed Mustafa Yaman : Video Processing.
