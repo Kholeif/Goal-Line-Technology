@@ -8,7 +8,11 @@ Goal Line Technology (sometimes referred to as a Goal Decision System is the use
 As shown in the figure below: 
 
 <p align="center">
-  <img src="docs/1.jpg">
+  <img src="docs/no goal.jpg">
+</p>
+
+<p align="center">
+  <img src="docs/goal.jpg">
 </p>
 
 # Input : 
