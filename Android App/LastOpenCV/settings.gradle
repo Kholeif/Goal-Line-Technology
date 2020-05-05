@@ -1,0 +1,3 @@
+rootProject.name='LastOpenCV'
+include ':app'
+include ':openCVLibrary310'
