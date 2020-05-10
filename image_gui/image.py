@@ -8,7 +8,7 @@
 
 
 import sys, os
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog,QLabel
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon , QPixmap
 import cv2
@@ -25,11 +25,17 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Button1 = QtWidgets.QPushButton(self.centralwidget)
-        self.Button1.setGeometry(QtCore.QRect(340, 300, 91, 31))
+        self.Button1.setGeometry(QtCore.QRect(160, 260, 131, 81))
         self.Button1.setObjectName("Button1")
         self.Button2 = QtWidgets.QPushButton(self.centralwidget)
-        self.Button2.setGeometry(QtCore.QRect(450, 300, 81, 31))
+        self.Button2.setGeometry(QtCore.QRect(310, 260, 131, 81))
         self.Button2.setObjectName("Button2")
+        self.photo = QtWidgets.QLabel(self.centralwidget)
+        self.photo.setGeometry(QtCore.QRect(0, 0, 590, 230))
+        self.photo.setText("")
+        self.photo.setPixmap(QtGui.QPixmap("ii.png"))
+        self.photo.setScaledContents(True)
+        self.photo.setObjectName("photo")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 589, 20))
@@ -63,8 +69,8 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
 
 
     def imageProcessing(self, MainWindow):
-        greenLower =(25, 100 , 100)
-        greenUpper =(46, 255, 255)
+        greenLower =(17, 156 , 117)
+        greenUpper =(27, 255, 255)
         pts = deque(maxlen=20)
         video = cv2.VideoCapture(self.fileName)
         fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
@@ -84,8 +90,8 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
             if flag==1:
                 frame2=frame.copy()
                 hsv = cv2.cvtColor(frame2, cv2.COLOR_BGR2HSV)
-                lower_white = np.array([0  , 0 ,171])
-                upper_white = np.array([255 , 56, 255])
+                lower_white = np.array([0  , 0 ,187])
+                upper_white = np.array([34 , 46, 255])
 
                 mask = cv2.inRange(hsv, lower_white, upper_white)
 
