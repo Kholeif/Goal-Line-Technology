@@ -72,7 +72,7 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
         greenUpper =(27, 255, 255)
         video_name = self.fileName
         video_name2=video_name.split(".")[0]+"_after.avi"
-        video_name3="extreme_left_"+video_name.split(".")[0]+".png"
+        video_name3=video_name.split(".")[0]+"_extreme_left.png"
         
         video = cv2.VideoCapture(video_name)
         fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
