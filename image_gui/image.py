@@ -14,7 +14,6 @@ from PyQt5.QtGui import QIcon , QPixmap
 import cv2
 import numpy as np
 import imutils
-from collections import deque
 
 
 
@@ -51,8 +50,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Button1.setText(_translate("MainWindow", "upload vedio"))
-        self.Button2.setText(_translate("MainWindow", "goal checking"))
+        self.Button1.setText(_translate("MainWindow", "Upload Video"))
+        self.Button2.setText(_translate("MainWindow", "Goal Checking"))
     
 
 
@@ -71,9 +70,14 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
     def imageProcessing(self, MainWindow):
         greenLower =(17, 156 , 117)
         greenUpper =(27, 255, 255)
-        pts = deque(maxlen=20)
-        video = cv2.VideoCapture(self.fileName)
+        video_name = self.fileName
+        video_name2=video_name.split(".")[0]+"_after.avi"
+        video_name3="extreme_left_"+video_name.split(".")[0]+".png"
+        
+        video = cv2.VideoCapture(video_name)
         fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
+        out = cv2.VideoWriter(video_name2,fourcc, 20.0,(1000,562),True)
+        
         xmin = 1000
         xmin2= 1000
         flag = 1
@@ -87,6 +91,7 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
                 break
             frame = imutils.resize(frame, width=1000)
             (h, w) = frame.shape[:2]
+            
             if flag==1:
                 frame2=frame.copy()
                 hsv = cv2.cvtColor(frame2, cv2.COLOR_BGR2HSV)
@@ -146,6 +151,7 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
             if flag2==1:
                 final=frame.copy()
             cv2.imshow("Frame", frame)
+            out.write(frame)
             key = cv2.waitKey(1) & 0xFF
             
             if key == 27:
@@ -154,11 +160,14 @@ class Widget(QtWidgets.QWidget, Ui_MainWindow):
         if final is not None:
             cv2.imshow("extreme left",final)
             cv2.waitKey()
-            cv2.imwrite("final.png",final)
+            cv2.imwrite(video_name3,final)
 
         video.release()
+        out.release()
+        cv2.destroyAllWindows()
+        
     def openFile(self):   
-        self.fileName, _ = QFileDialog.getOpenFileName(self, "upload vedio",".", "Video Files (*.mp4 *.flv *.ts *.mts *.avi *.MOV)")
+        self.fileName, _ = QFileDialog.getOpenFileName(self, "upload video",".", "Video Files (*.mp4 *.flv *.ts *.mts *.avi *.MOV)")
 
 
 
