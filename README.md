@@ -1,5 +1,17 @@
+Names                    | Ids                                                                                                                                                                                                                                                                                                                                            | Contribution
+------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------
+**Mohamed Ashraf Youssef**            | 1501158                                                                                                                                                              | Gui
+**Mahmoud Yasser Mohamed**            | 16X0120                                                                                                                                                              | Gui
+**Mahmoud Mohamed Kholeif**           | 1501370                                                                                                                                                              | Video Processing
+**Mohamed Mostafa Yaman**             | 15W0032                                                                                                                                                              | Video Processing
+**Mohamed Ahmed Abdelhamid**          | 1501132                                                                                                                                                              | Video Processing
+
+# For Testing :
+open ( final project with gui ) folder, and execute image.exe file , then upload any video and test it . 
+
+
 # Goal-Line-Technology
-Our goal is to develop an android app that captures a video and detects whether the ball has crossed the line completely or not. In other words it decides if it’s a GOAL or NO GOAL.
+Our goal is to develop an executable file , through it we can upload a video and detects whether the ball has crossed the line completely or not. In other words it decides if it’s a GOAL or NO GOAL.
 
 
 
@@ -28,16 +40,6 @@ Output will be :
 
 # Project Implementation :
 Consists of two parts: 
-1. Developing an android app. 
+1. Gui to upload video to be tested. 
 2. Video Processing using opencv.
 
-# Work Distribution : 
-Mohamed Ashraf Youssef : Android Development.
-
-Mahmoud Yasser Mohamed : Android Development.
-
-Mahmoud Mohamed Kholeif : Video Processing.
-
-Mohamed Ahmed Abdelhamid : Video Processing. 
-
-Mohamed Mustafa Yaman : Video Processing.
