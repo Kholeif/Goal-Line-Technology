@@ -1,4 +1,10 @@
-Names                    | Ids                                                                                                                                                                                                                                                                                                                                            | Contribution
+# Goal-Line-Technology :
+Our goal is to develop an executable file , through it we can upload a video and detects whether the ball has crossed the line completely or not. In other words it decides if it’s a GOAL or NO GOAL.
+
+
+# Work Distribution :
+
+Names                    | IDs                                                                                                                                                                                                                                                                                                                                            | Contribution
 ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------
 **Mohamed Ashraf Youssef**            | 1501158                                                                                                                                                              | Gui
 **Mahmoud Yasser Mohamed**            | 16X0120                                                                                                                                                              | Gui
@@ -8,10 +14,6 @@ Names                    | Ids                                                  
 
 # For Testing :
 open ( final project with gui ) folder, and execute image.exe file , then upload any video and test it . 
-
-
-# Goal-Line-Technology
-Our goal is to develop an executable file , through it we can upload a video and detects whether the ball has crossed the line completely or not. In other words it decides if it’s a GOAL or NO GOAL.
 
 
 
@@ -33,7 +35,7 @@ Input will be a video recorded by the android application of a white line and a 
 # Processing operation : 
 Processing is done on the video by tracking the ball during crossing the white line. 
 
-# Output: 
+# Output : 
 Output will be : 
 1. Goal if the whole ball completely passes over the line. 
 2. No Goal if the ball rebounded without completely passing over the line. 
