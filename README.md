@@ -2,6 +2,10 @@
 Our goal is to develop an executable file , through it we can upload a video and detects whether the ball has crossed the line completely or not. In other words it decides if it’s a GOAL or NO GOAL.
 
 
+# For Testing :
+open ( final project with gui ) folder, and execute image.exe file , then upload any video and test it .
+
+
 # Work Distribution :
 
 Names                    | IDs                                                                                                                                                                                                                                                                                                                                            | Contribution
@@ -11,10 +15,6 @@ Names                    | IDs                                                  
 **Mahmoud Mohamed Kholeif**           | 1501370                                                                                                                                                              | Video Processing
 **Mohamed Mostafa Yaman**             | 15W0032                                                                                                                                                              | Video Processing
 **Mohamed Ahmed Abdelhamid**          | 1501132                                                                                                                                                              | Video Processing
-
-# For Testing :
-open ( final project with gui ) folder, and execute image.exe file , then upload any video and test it . 
-
 
 
 # Introduction : 
